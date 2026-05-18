@@ -88,6 +88,30 @@ main {
     box-shadow: 0 0 0 3px rgba(66, 8, 19, 0.08);
 }
 
+.alert-container {
+    background-color: #fff5f5;
+    border: 2px solid var(--institucional-vino);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.alert-container h4 {
+    color: var(--institucional-vino);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.alert-container p {
+    font-size: 0.95rem;
+    color: var(--texto-principal);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
 .grid-dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -146,7 +170,6 @@ main {
     border: 1px solid;
 }
 
-/* Estilos diferenciados por tipo de herramienta (Diseño de Tablero) */
 .lang .panel-category { color: var(--color-lang); }
 .lang .version-tag { color: var(--color-lang); border-color: rgba(166, 38, 57, 0.3); background: rgba(166, 38, 57, 0.04); }
 
