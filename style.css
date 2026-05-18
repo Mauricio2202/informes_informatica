@@ -1,0 +1,191 @@
+:root {
+    --institucional-vino: #420813;
+    --institucional-oro: #c5a059;
+    --bg-tablero: #f9f9fb;
+    --linea-borde: #dbdbe2;
+    --texto-principal: #1e1e24;
+    --texto-secundario: #565666;
+    
+    --color-lang: #a62639;
+    --color-db: #1d63b8;
+    --color-web: #007a78;
+    --color-tool: #495057;
+    --color-ide: #6f42c1;
+    --color-engine: #d97706;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--bg-tablero);
+    color: var(--texto-principal);
+    letter-spacing: -0.2px;
+}
+
+header {
+    background-color: var(--institucional-vino);
+    color: #ffffff;
+    padding: 3rem 2rem;
+    text-align: left;
+    border-bottom: 2px solid var(--institucional-oro);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header-container h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.header-container h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--institucional-oro);
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.header-container p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+main {
+    max-width: 1400px;
+    margin: 2.5rem auto;
+    padding: 0 2rem;
+}
+
+.search-container {
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid var(--linea-borde);
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+    color: var(--texto-principal);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#searchInput:focus {
+    border-color: var(--institucional-vino);
+    box-shadow: 0 0 0 3px rgba(66, 8, 19, 0.08);
+}
+
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--linea-borde);
+    border-left: 1px solid var(--linea-borde);
+}
+
+.panel-item, .card-microsoft {
+    background-color: #ffffff;
+    border-right: 1px solid var(--linea-borde);
+    border-bottom: 1px solid var(--linea-borde);
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.2s ease;
+}
+
+.panel-item:hover, .card-microsoft:hover {
+    background-color: #f4f4f7;
+}
+
+.panel-header {
+    margin-bottom: 1.5rem;
+}
+
+.panel-category {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.panel-item h3, .card-microsoft h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--texto-principal);
+}
+
+.panel-body p {
+    font-size: 0.88rem;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+.version-tag {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid;
+}
+
+/* Estilos diferenciados por tipo de herramienta (Diseño de Tablero) */
+.lang .panel-category { color: var(--color-lang); }
+.lang .version-tag { color: var(--color-lang); border-color: rgba(166, 38, 57, 0.3); background: rgba(166, 38, 57, 0.04); }
+
+.db .panel-category { color: var(--color-db); }
+.db .version-tag { color: var(--color-db); border-color: rgba(29, 99, 184, 0.3); background: rgba(29, 99, 184, 0.04); }
+
+.card-microsoft .panel-category { color: #00a4ef; }
+.card-microsoft .version-tag { color: #252525; border-color: #00a4ef; background: #f2f9ff; }
+
+.web .panel-category { color: var(--color-web); }
+.web .version-tag { color: var(--color-web); border-color: rgba(0, 122, 120, 0.3); background: rgba(0, 122, 120, 0.04); }
+
+.tool .panel-category { color: var(--color-tool); }
+.tool .version-tag { color: var(--color-tool); border-color: rgba(73, 80, 85, 0.3); background: rgba(73, 80, 85, 0.04); }
+
+.ide .panel-category { color: var(--color-ide); }
+.ide .version-tag { color: var(--color-ide); border-color: rgba(111, 66, 193, 0.3); background: rgba(111, 66, 193, 0.04); }
+
+.engine .panel-category { color: var(--color-engine); }
+.engine .version-tag { color: var(--color-engine); border-color: rgba(217, 119, 6, 0.3); background: rgba(217, 119, 6, 0.04); }
+
+footer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    font-size: 0.75rem;
+    color: var(--texto-secundario);
+    letter-spacing: 0.5px;
+    border-top: 1px solid var(--linea-borde);
+}
+
+@media (max-width: 768px) {
+    main { padding: 0 1rem; }
+    header { padding: 2rem 1rem; }
+    .grid-dashboard {
+        border-left: none;
+        grid-template-columns: 1fr;
+    }
+    .panel-item, .card-microsoft {
+        border-left: 1px solid var(--linea-borde);
+    }
+}

@@ -1,13 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Informes para semana de informática</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Control de Entornos - Instituto Leonardo Bravo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <header>
+        <div class="header-container">
+            <h1>INSTITUTO LEONARDO BRAVO</h1>
+            <h2>Plantel Centro | Coordinación de Logística</h2>
+            <p>Estandarización de Entornos de Desarrollo Académico</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Filtrar por lenguaje, base de datos, herramienta...">
+        </div>
+
+        <section class="grid-dashboard" id="cardsGrid">
+            
+            <div class="panel-item lang" data-tags="java jdk sdk netbeans eclipse">
+                <div class="panel-header">
+                    <span class="panel-category">Requisito Base</span>
+                    <h3>Java Development Kit (JDK)</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">JDK 21 LTS</div>
+                    <p>Requisito indispensable para ejecutar NetBeans 21 y compilar proyectos Java. Distribución recomendada: Temurin de Adoptium.</p>
+                </div>
+            </div>
+
+            <div class="panel-item db" data-tags="mysql workbench sql db">
+                <div class="panel-header">
+                    <span class="panel-category">Base de Datos</span>
+                    <h3>MySQL & Workbench</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">8.0.36</div>
+                    <p>Motor relacional estándar para proyectos de backend. Administración requerida mediante MySQL Workbench.</p>
+                </div>
+            </div>
+
+            <div class="panel-item db" data-tags="sqlite db browser sql">
+                <div class="panel-header">
+                    <span class="panel-category">Base de Datos</span>
+                    <h3>SQLite</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">3.45.0+</div>
+                    <p>Para almacenamiento embebido local. Gestión recomendada mediante DB Browser for SQLite.</p>
+                </div>
+            </div>
+
+            <div class="card-microsoft mssql" data-tags="sql server microsoft mssql db">
+                <div class="panel-header">
+                    <span class="panel-category">Base de Datos</span>
+                    <h3>SQL Server</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">Express 2022</div>
+                    <p>Entorno de datos Microsoft. Cliente de administración: SQL Server Management Studio (SSMS) v19.x.</p>
+                </div>
+            </div>
+
+            <div class="panel-item lang" data-tags="c c++">
+                <div class="panel-header">
+                    <span class="panel-category">Lenguaje</span>
+                    <h3>C / C++</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">C17 / C++20</div>
+                    <p>Compilador oficial compatible: GCC 13.2 (MinGW-w64 para entornos Windows).</p>
+                </div>
+            </div>
+
+            <div class="panel-item web" data-tags="html css javascript js">
+                <div class="panel-header">
+                    <span class="panel-category">Desarrollo Web</span>
+                    <h3>HTML5, CSS3 & JS</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">ECMAScript 2023</div>
+                    <p>Estándares web modernos. Entorno de ejecución local basado en Node.js 20.x LTS.</p>
+                </div>
+            </div>
+
+            <div class="panel-item tool" data-tags="git github control versiones">
+                <div class="panel-header">
+                    <span class="panel-category">Control de Versiones</span>
+                    <h3>Git & GitHub</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">Git 2.45+ / Cloud</div>
+                    <p>Uso obligatorio de Git local para control de cambios y GitHub para el despliegue del repositorio remoto.</p>
+                </div>
+            </div>
+
+            <div class="panel-item ide" data-tags="visual studio code vscode">
+                <div class="panel-header">
+                    <span class="panel-category">IDE / Editor</span>
+                    <h3>Visual Studio Code</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">1.100+ (Estable)</div>
+                    <p>Editor ligero. Requiere C/C++ Extension Pack y Live Server según el trayecto técnico.</p>
+                </div>
+            </div>
+
+            <div class="panel-item ide" data-tags="netbeans">
+                <div class="panel-header">
+                    <span class="panel-category">IDE</span>
+                    <h3>Apache NetBeans</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">Versión 21</div>
+                    <p>Entorno enfocado a Java. Requiere el mapeo correcto de la variable de entorno del JDK 21.</p>
+                </div>
+            </div>
+
+            <div class="panel-item ide" data-tags="eclipse">
+                <div class="panel-header">
+                    <span class="panel-category">IDE</span>
+                    <h3>Eclipse IDE</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">2024-03 (4.31)</div>
+                    <p>Configuración para desarrollo Enterprise Java y aplicaciones web distribuidas.</p>
+                </div>
+            </div>
+
+            <div class="panel-item engine" data-tags="blender">
+                <div class="panel-header">
+                    <span class="panel-category">Gráficos 3D</span>
+                    <h3>Blender</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">4.2 LTS</div>
+                    <p>Entorno de modelado, iluminación y renderizado oficial para proyectos multimedia.</p>
+                </div>
+            </div>
+
+            <div class="panel-item engine" data-tags="unity">
+                <div class="panel-header">
+                    <span class="panel-category">Motor de Videojuegos</span>
+                    <h3>Unity</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="version-tag">2023.2 LTS</div>
+                    <p>Desarrollo interactivo. Gestión e instalación a través de la plataforma Unity Hub.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>DIRECCIÓN DE LOGÍSTICA &mdash; MAURICIO GARRO &bull; INSTITUTO LEONARDO BRAVO PLANTEL CENTRO &bull; 2026</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
